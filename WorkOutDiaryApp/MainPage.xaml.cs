@@ -21,7 +21,7 @@ namespace WorkOutDiaryApp
         private async void Button_Add_To_Diary_Clicked(object sender, EventArgs e)
         {
             NewDiary newDiary = new NewDiary();
-            newDiary.Title = "New Diary";
+            newDiary.Title = "New Diary"; 
             await Navigation.PushAsync(newDiary, true);// True skapar en animation
             
         }

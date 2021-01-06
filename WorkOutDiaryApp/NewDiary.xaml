@@ -3,10 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WorkOutDiaryApp.NewDiary">
     <ContentPage.Content>
+        <ScrollView>
+            
         <StackLayout>
-            <Label Text="Här ska man lägga in vilka övningar och hur många man har gjort. Bild ska vara möjligt för att följa hur du ser ut (valbart)."
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+                <StackLayout Margin="15,15">
+                    <Label Text="Squats" />
+                    <Entry Placeholder="Number of reps"   x:Name="Squats"  /> <!--Om möjligt, fixa så att alla inputs har en ram (inte bara ett fult streck)-->
+                    <Label Text="Push ups" />
+                    <Entry Placeholder="Number of reps" x:Name="Push ups"></Entry>
+                    <Label Text="Mountain climbers" />
+                    <Entry Placeholder="Number of reps" x:Name="MountainClimbers"></Entry>
+                    <Label Text="Burpees" />
+                    <Entry Placeholder="Number of reps" x:Name="Burpees"></Entry>
+                    <Label Text="Date" />
+                    <DatePicker Date="01,01,2021"></DatePicker> <!--Fixa så att dagens datum är standard-->
+                </StackLayout>
+
+                <StackLayout Margin="15,15">
+                    <Label Text="Här ska valet för bilden ligga" />
+                    <Image Source="https://www.incimages.com/uploaded_files/image/1920x1080/getty_901096798_200013332000928080_415454.jpg" Aspect="AspectFit"/>
+                    <Button Text="Take a photo" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Button Text="Save Diary" />
+                </StackLayout>
+            
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
+
+ 
