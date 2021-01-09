@@ -18,6 +18,7 @@ namespace WorkOutDiaryApp
             InitializeComponent();
         }
 
+        // Take a photo with "Take photo" button
         async void Take_Photo_Clicked(object sender, EventArgs e)
         {
             var result = await MediaPicker.CapturePhotoAsync();
@@ -27,6 +28,20 @@ namespace WorkOutDiaryApp
             {
                 var stream = await result.OpenReadAsync();
                 resultImage.Source = ImageSource.FromStream(() => stream);
+            }
+        }
+        // Convert image to byte for SQLite
+        private ImageSource ConvertImageFrom(byte[] ImageFile)
+        {
+            try
+            {
+                var stream = new MemoryStream(ImageFile);
+                return ImageSource.FromStream(() => stream);
+            }
+            catch (Exception)
+            {
+                // if image fails or does not exist
+                return null;
             }
         }
     }
