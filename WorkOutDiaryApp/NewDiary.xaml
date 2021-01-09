@@ -20,16 +20,12 @@
                     <DatePicker Date="01,01,2021"></DatePicker>
                     <!--Fixa så att dagens datum är standard-->
                 </StackLayout>
-            
 
-
-                <StackLayout Margin="15,15">
+                <!--<StackLayout Margin="15,15">
                     <Label Text="Här ska valet för bilden ligga" />
                     <Image Source="https://www.incimages.com/uploaded_files/image/1920x1080/getty_901096798_200013332000928080_415454.jpg" Aspect="AspectFit"/>
-                    <Button Text="Take a photo" 
-                            x:Name="takePhoto"
-                            Clicked="takePhoto_Clicked"/>
-                </StackLayout>
+                    <Button Text="Take a photo" />
+                </StackLayout>-->
 
                 <StackLayout>
                     <Button Text="Save Diary" />
