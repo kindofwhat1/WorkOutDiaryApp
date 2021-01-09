@@ -8,7 +8,7 @@
         
         
         <StackLayout x:Name="addWorkOut" Margin="50,25,50,25" VerticalOptions="Center">
-            <Button Text="Add workout library" 
+            <Button Text="Add workout entry" 
                     FontSize="Medium"
                     TextColor="White"
                     CornerRadius="15"

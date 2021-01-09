@@ -8,21 +8,27 @@
         <StackLayout>
                 <StackLayout Margin="15,15">
                     <Label Text="Squats" />
-                    <Entry Placeholder="Number of reps"   x:Name="Squats"  /> <!--Om möjligt, fixa så att alla inputs har en ram (inte bara ett fult streck)-->
+                    <Entry Placeholder="Number of reps"   x:Name="Squats"  />
+                    <!--Om möjligt, fixa så att alla inputs har en ram (inte bara ett fult streck)-->
                     <Label Text="Push ups" />
-                    <Entry Placeholder="Number of reps" x:Name="Push ups"></Entry>
+                    <Entry Placeholder="Number of reps" x:Name="Pushups"></Entry>
                     <Label Text="Mountain climbers" />
                     <Entry Placeholder="Number of reps" x:Name="MountainClimbers"></Entry>
                     <Label Text="Burpees" />
                     <Entry Placeholder="Number of reps" x:Name="Burpees"></Entry>
                     <Label Text="Date" />
-                    <DatePicker Date="01,01,2021"></DatePicker> <!--Fixa så att dagens datum är standard-->
+                    <DatePicker Date="01,01,2021"></DatePicker>
+                    <!--Fixa så att dagens datum är standard-->
                 </StackLayout>
+            
+
 
                 <StackLayout Margin="15,15">
                     <Label Text="Här ska valet för bilden ligga" />
                     <Image Source="https://www.incimages.com/uploaded_files/image/1920x1080/getty_901096798_200013332000928080_415454.jpg" Aspect="AspectFit"/>
-                    <Button Text="Take a photo" />
+                    <Button Text="Take a photo" 
+                            x:Name="takePhoto"
+                            Clicked="takePhoto_Clicked"/>
                 </StackLayout>
 
                 <StackLayout>
