@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WorkOutDiaryApp.Model
 {
-    class DiaryModel
+    public class DiaryModel
     {
         public int Id { get; set; }
         public int Squats { get; set; }

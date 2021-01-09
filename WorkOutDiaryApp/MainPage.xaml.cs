@@ -15,6 +15,7 @@ namespace WorkOutDiaryApp
         public MainPage()
         {
             InitializeComponent();
+
         }
 
 

@@ -20,6 +20,10 @@
                     <DatePicker Date="01,01,2021"></DatePicker>
                     <!--Fixa så att dagens datum är standard-->
                 </StackLayout>
+                <StackLayout>
+                    <Button Text="Take a photo" Clicked="Take_Photo_Clicked" />
+                    <Image x:Name="resultImage" />
+                </StackLayout>
 
                 <!--<StackLayout Margin="15,15">
                     <Label Text="Här ska valet för bilden ligga" />
