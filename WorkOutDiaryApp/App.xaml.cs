@@ -1,4 +1,5 @@
 ﻿using System;
+using WorkOutDiaryApp.ViewModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -6,7 +7,9 @@ namespace WorkOutDiaryApp
 {
     public partial class App : Application
     {
+        public static DiaryViewModel diaryViewModel { get; set; } = new DiaryViewModel();
         public App()
+            
         {
             InitializeComponent();
 
@@ -14,8 +17,9 @@ namespace WorkOutDiaryApp
            MainPage = new NavigationPage(mainPage);
         }
 
-        protected override void OnStart()
+        protected override async void OnStart()
         {
+           await diaryViewModel.InitializeDataBase();
         }
 
         protected override void OnSleep()

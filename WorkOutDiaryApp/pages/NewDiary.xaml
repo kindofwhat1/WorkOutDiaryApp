@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WorkOutDiaryApp.NewDiary">
+    <ContentPage.Content>
+        <ScrollView>
+            
+        <StackLayout>
+                <StackLayout Margin="15,15">
+
+                    <Label Text="Squats" FontSize="Small" TextColor="Black" FontAttributes="Bold"/>
+                    <Frame Padding="20,5" CornerRadius="10">
+                        <Entry Placeholder="Number of reps"   x:Name="squatsEntry"  />
+                    </Frame>
+                    <Label Text="Push ups" FontSize="Small" TextColor="Black" FontAttributes="Bold"/>
+                    <Frame Padding="20,5" CornerRadius="10">
+                        <Entry Placeholder="Number of reps" x:Name="pushupsEntry" />
+                    </Frame>
+                    <Label Text="Mountain climbers" FontSize="Small" TextColor="Black" FontAttributes="Bold" />
+                    <Frame Padding="20,5" CornerRadius="10" >
+                        <Entry Placeholder="Number of reps" x:Name="mountainClimbersEntry" />
+                    </Frame>
+                    <Label Text="Mountain climbers" FontSize="Small" TextColor="Black" FontAttributes="Bold" />
+                    <Label Text="Burpees"  />
+                    <Frame Padding="20,5" CornerRadius="10">
+                        <Entry Placeholder="Number of reps" x:Name="burpeesEntry"/>
+                    </Frame>
+
+                    <Label Text="Mountain climbers" FontSize="Small" TextColor="Black" FontAttributes="Bold" />
+                    <Label Text="Date"  />
+                    <DatePicker Date="01,01,2021" x:Name="dateEntry"></DatePicker>
+                    <!--Fixa så att dagens datum är standard-->
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Take a photo" Clicked="Take_Photo_Clicked" />
+                    <Image x:Name="resultImage" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Button Text="Save Diary" Clicked="Save_Diary_Clicked"/>
+                </StackLayout>
+            
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+ 

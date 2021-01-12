@@ -15,6 +15,8 @@ namespace WorkOutDiaryApp
         public Diary()
         {
             InitializeComponent();
+            App.diaryViewModel.GetDiaryEntries();
+            BindingContext = App.diaryViewModel;
         }
     }
 }

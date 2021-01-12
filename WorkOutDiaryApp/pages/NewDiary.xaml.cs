@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WorkOutDiaryApp.Model;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -11,8 +12,11 @@ using Xamarin.Forms.Xaml;
 namespace WorkOutDiaryApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
     public partial class NewDiary : ContentPage
+
     {
+        DiaryModel diaryModel = new DiaryModel();
         public NewDiary()
         {
             InitializeComponent();
@@ -43,6 +47,27 @@ namespace WorkOutDiaryApp
                 // if image fails or does not exist
                 return null;
             }
+        }
+        public async void CreateDiaryEntry()
+        {
+            var diaryModel = new DiaryModel();
+
+            {
+                diaryModel.Squats = int.Parse(squatsEntry.Text);
+                diaryModel.PushUps = int.Parse(pushupsEntry.Text);
+                diaryModel.MountainClimbers = int.Parse(mountainClimbersEntry.Text);
+                diaryModel.Burpees = int.Parse(burpeesEntry.Text);
+                diaryModel.Time = dateEntry.Date;
+            };
+
+            await App.diaryViewModel.CreateDiaryEntry(diaryModel);
+        }
+
+        private async void Save_Diary_Clicked(object sender, EventArgs e)
+        {
+            Diary diary = new Diary();
+            CreateDiaryEntry();
+            await Navigation.PushAsync(diary, true);
         }
     }
 }
