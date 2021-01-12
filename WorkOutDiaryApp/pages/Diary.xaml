@@ -1,20 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Black"
+             Title="Diary" 
              x:Class="WorkOutDiaryApp.Diary">
     <ContentPage.Content>
+        <ScrollView>
+
         <StackLayout>
-            <ListView ItemsSource="{Binding diaryModelList}">
+            <ListView ItemsSource="{Binding diaryModelList}" HasUnevenRows="True" >
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout>
-                            <Label Text="{Binding Id}" />
-                        </StackLayout>
+                                <StackLayout Margin="25" >
+                                    <Frame BackgroundColor="#E8E8E8">
+                                        <StackLayout>
+
+                                            <Frame BackgroundColor="#E8E8E8">
+                                                <StackLayout Margin="25,0" Orientation="Vertical" VerticalOptions="Center" >
+                                                    <Label Text="Diary No." TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+                                                    <Label Text="{Binding Id}" FontSize="Medium" />
+                                                    <Label Text="Squats" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
+                                                    <Label Text="{Binding Squats}" />
+                                                    <Label Text="Push Ups" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
+                                                    <Label Text="{Binding PushUps}" />
+                                                    <Label Text="MountainClimbers" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+                                                    <Label Text="{Binding MountainClimbers}" />
+                                                    <Label Text="Burpees" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
+                                                    <Label Text="{Binding Burpees}" />
+                                                    <Label Text="Date" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+                                                    <Label Text="{Binding Time}" />
+                                                    <Image Source="{Binding ImageFile}" />
+                                                    <Button Text="Remove entry" BackgroundColor="Olive" CornerRadius="20"/>
+                                                </StackLayout>
+                                            </Frame>
+
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
+
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

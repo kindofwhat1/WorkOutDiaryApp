@@ -16,6 +16,7 @@ namespace WorkOutDiaryApp
     public partial class NewDiary : ContentPage
 
     {
+        private byte[] ImageByte; 
         DiaryModel diaryModel = new DiaryModel();
         public NewDiary()
         {
@@ -32,6 +33,7 @@ namespace WorkOutDiaryApp
             {
                 var stream = await result.OpenReadAsync();
                 resultImage.Source = ImageSource.FromStream(() => stream);
+                ImageByte = File.ReadAllBytes(result.FullPath);
             }
         }
         // Convert image to byte for SQLite
@@ -58,6 +60,7 @@ namespace WorkOutDiaryApp
                 diaryModel.MountainClimbers = int.Parse(mountainClimbersEntry.Text);
                 diaryModel.Burpees = int.Parse(burpeesEntry.Text);
                 diaryModel.Time = dateEntry.Date;
+                diaryModel.ImageFile = ImageByte;
             };
 
             await App.diaryViewModel.CreateDiaryEntry(diaryModel);

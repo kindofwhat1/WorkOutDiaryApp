@@ -41,12 +41,17 @@ namespace WorkOutDiaryApp.ViewModel
         // Fetch data from NewDiary entries and add to Db 
         public async Task CreateDiaryEntry(DiaryModel diaryModel)
         {
+
             try
             {
                 using (SQLiteConnection db = new SQLiteConnection(databasePath))
                 {
-                    db.Insert(diaryModel);
+                    if(diaryModel != null)
+                    {
+                        db.Insert(diaryModel);
+                    }
                 }
+                GetDiaryEntries();
             }
             catch (Exception e)
             {

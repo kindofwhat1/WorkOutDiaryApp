@@ -1,43 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="Black"
              x:Class="WorkOutDiaryApp.NewDiary">
     <ContentPage.Content>
         <ScrollView>
             
         <StackLayout>
                 <StackLayout Margin="15,15">
-
-                    <Label Text="Squats" FontSize="Small" TextColor="Black" FontAttributes="Bold"/>
+                    <Frame BackgroundColor="#E8E8E8">
+                        <StackLayout>
+                            
+                    <Label Text="Squats" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
                     <Frame Padding="20,5" CornerRadius="10">
                         <Entry Placeholder="Number of reps"   x:Name="squatsEntry"  />
                     </Frame>
-                    <Label Text="Push ups" FontSize="Small" TextColor="Black" FontAttributes="Bold"/>
+                            <Label Text="Push ups" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
                     <Frame Padding="20,5" CornerRadius="10">
                         <Entry Placeholder="Number of reps" x:Name="pushupsEntry" />
                     </Frame>
-                    <Label Text="Mountain climbers" FontSize="Small" TextColor="Black" FontAttributes="Bold" />
+                            <Label Text="Mountain climbers" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
                     <Frame Padding="20,5" CornerRadius="10" >
                         <Entry Placeholder="Number of reps" x:Name="mountainClimbersEntry" />
                     </Frame>
-                    <Label Text="Mountain climbers" FontSize="Small" TextColor="Black" FontAttributes="Bold" />
-                    <Label Text="Burpees"  />
+                            <Label Text="Burpees" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
                     <Frame Padding="20,5" CornerRadius="10">
                         <Entry Placeholder="Number of reps" x:Name="burpeesEntry"/>
                     </Frame>
 
-                    <Label Text="Mountain climbers" FontSize="Small" TextColor="Black" FontAttributes="Bold" />
-                    <Label Text="Date"  />
+
+                            <Label Text="Date" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
                     <DatePicker Date="01,01,2021" x:Name="dateEntry"></DatePicker>
+                        </StackLayout>
+
+
                     <!--Fixa så att dagens datum är standard-->
+                    </Frame>
                 </StackLayout>
                 <StackLayout>
-                    <Button Text="Take a photo" Clicked="Take_Photo_Clicked" />
+                    <Button Text="Take a photo" Clicked="Take_Photo_Clicked" BackgroundColor="Olive" CornerRadius="20" Margin="50,0,50,0"/>
                     <Image x:Name="resultImage" />
                 </StackLayout>
 
                 <StackLayout>
-                    <Button Text="Save Diary" Clicked="Save_Diary_Clicked"/>
+                    <Button Text="Save Diary" Clicked="Save_Diary_Clicked" BackgroundColor="Olive" CornerRadius="20" Margin="50,0,50,0"/>
                 </StackLayout>
             
             </StackLayout>
