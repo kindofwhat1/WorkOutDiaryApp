@@ -30,7 +30,7 @@
 
 
                             <Label Text="Date" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
-                    <DatePicker Date="" x:Name="dateEntry"></DatePicker>
+                    <DatePicker Date="11/11/2021" x:Name="dateEntry"></DatePicker>
                         </StackLayout>
 
 
