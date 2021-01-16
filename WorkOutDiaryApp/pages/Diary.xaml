@@ -15,7 +15,6 @@
                                 <StackLayout Margin="25" >
                                     <Frame BackgroundColor="{StaticResource White}">
                                         <StackLayout>
-
                                             <Frame BackgroundColor="{StaticResource White}">
                                                 <StackLayout Margin="25,0" Orientation="Vertical" VerticalOptions="Center" >
 
@@ -33,7 +32,6 @@
                                                     <Button Text="Remove entry" BackgroundColor="{StaticResource OliveGreen}" CornerRadius="20" Clicked="Remove_Entry_Clicked" CommandParameter="{Binding .}"/>
                                                 </StackLayout>
                                             </Frame>
-
                                         </StackLayout>
                                     </Frame>
                                 </StackLayout>

@@ -17,15 +17,13 @@ namespace WorkOutDiaryApp
             InitializeComponent();
         }
 
-
         private async void Button_Add_To_Diary_Clicked(object sender, EventArgs e)
         {
             NewDiary newDiary = new NewDiary();
             newDiary.Title = "New Diary"; 
-            await Navigation.PushAsync(newDiary, true);// True skapar en animation vid navigering
+            await Navigation.PushAsync(newDiary, true);// True adds a small animation on navigation
             
         }
-
         private async void Button_Go_To_Diary_Clicked(object sender, EventArgs e)
         {
             Diary diary = new Diary();

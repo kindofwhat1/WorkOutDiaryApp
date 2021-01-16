@@ -19,7 +19,7 @@ namespace WorkOutDiaryApp.ViewModel
         private string dataBaseName = "WorkOutDiaryAppDatabase.db", databasePath;
 
         // Create a database
-        public async Task InitializeDataBase(/*DiaryModel diary  -- Exempel på att lägga till rad i databas*/)
+        public async Task InitializeDataBase()
         {
             try
             {
@@ -30,8 +30,6 @@ namespace WorkOutDiaryApp.ViewModel
                 using (SQLiteConnection db = new SQLiteConnection(databasePath))
                 {
                     db.CreateTable<DiaryModel>();
-                    /*
-                    db.Insert(diary);*/
                 }
             }
             catch (Exception e)
@@ -97,11 +95,5 @@ namespace WorkOutDiaryApp.ViewModel
         {
             propertyChanged?.Invoke(this, new PropertyChangingEventArgs(propertyName));
         }
-        public void Update()
-        {
-
-        }
-
-
     }
 }
