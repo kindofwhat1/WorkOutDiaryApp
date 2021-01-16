@@ -15,7 +15,6 @@ namespace WorkOutDiaryApp
         public MainPage()
         {
             InitializeComponent();
-
         }
 
 
@@ -23,7 +22,7 @@ namespace WorkOutDiaryApp
         {
             NewDiary newDiary = new NewDiary();
             newDiary.Title = "New Diary"; 
-            await Navigation.PushAsync(newDiary, true);// True skapar en animation
+            await Navigation.PushAsync(newDiary, true);// True skapar en animation vid navigering
             
         }
 
