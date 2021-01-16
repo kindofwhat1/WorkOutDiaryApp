@@ -2,26 +2,26 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WorkOutDiaryApp.MainPage"
-             Title="Work out diary"
-             BackgroundColor="Black">
+             Title="Workout diary"
+             BackgroundColor="{StaticResource Black}">
 
-    <StackLayout BackgroundColor="Black">
+    <StackLayout BackgroundColor="{StaticResource Black}">
         
         
         <StackLayout x:Name="addWorkOut" Margin="50,40,50,25" VerticalOptions="Center">
             <Button Text="Add workout entry" 
                     FontSize="Medium"
-                    TextColor="White"
+                    TextColor="{StaticResource White}"
                     CornerRadius="15"
                     Clicked="Button_Add_To_Diary_Clicked"
-                    BackgroundColor="Indigo" 
-                    Padding="0,100" />
+                    BackgroundColor="{StaticResource Purple}" 
+                    Padding="0,100" AutomationProperties.IsInAccessibleTree="False" />
         </StackLayout>
 
         <StackLayout x:Name="seeDiary" Margin="50,20,50,25" VerticalOptions="Center" >
             <Button Text="See Diary" 
                     FontSize="Medium" 
-                    TextColor="White"
+                    TextColor="{StaticResource White}"
                     CornerRadius="15"
                     Clicked="Button_Go_To_Diary_Clicked"
                     BackgroundColor="Indigo" 

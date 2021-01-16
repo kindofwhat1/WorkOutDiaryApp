@@ -13,24 +13,24 @@
                 <DataTemplate>
                     <ViewCell>
                                 <StackLayout Margin="25" >
-                                    <Frame BackgroundColor="#E8E8E8">
+                                    <Frame BackgroundColor="{StaticResource White}">
                                         <StackLayout>
 
-                                            <Frame BackgroundColor="#E8E8E8">
+                                            <Frame BackgroundColor="{StaticResource White}">
                                                 <StackLayout Margin="25,0" Orientation="Vertical" VerticalOptions="Center" >
 
-                                                    <Label Text="Squats" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
+                                                    <Label Text="Squats" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="Medium" />
                                                     <Label Text="{Binding Squats}" />
-                                                    <Label Text="Push Ups" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
+                                                    <Label Text="Push Ups" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="Medium" />
                                                     <Label Text="{Binding PushUps}" />
-                                                    <Label Text="MountainClimbers" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+                                                    <Label Text="MountainClimbers" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="Medium"/>
                                                     <Label Text="{Binding MountainClimbers}" />
-                                                    <Label Text="Burpees" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
+                                                    <Label Text="Burpees" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="Medium" />
                                                     <Label Text="{Binding Burpees}" />
-                                                    <Label Text="Date" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
+                                                    <Label Text="Date" TextColor="{StaticResource Black}" FontAttributes="Bold" FontSize="Medium"/>
                                                     <Label Text="{Binding Time}" />
                                                     <Image Source="{Binding imageSource}" />
-                                                    <Button Text="Remove entry" BackgroundColor="Olive" CornerRadius="20" Clicked="Remove_Entry_Clicked" CommandParameter="{Binding .}"/>
+                                                    <Button Text="Remove entry" BackgroundColor="{StaticResource OliveGreen}" CornerRadius="20" Clicked="Remove_Entry_Clicked" CommandParameter="{Binding .}"/>
                                                 </StackLayout>
                                             </Frame>
 

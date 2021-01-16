@@ -8,28 +8,28 @@
             
         <StackLayout>
                 <StackLayout Margin="15,15">
-                    <Frame BackgroundColor="#E8E8E8">
+                    <Frame BackgroundColor="{StaticResource White}">
                         <StackLayout>
-                            
-                    <Label Text="Squats" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+
+                            <Label Text="Squats" FontSize="Medium" TextColor="{StaticResource Black}" FontAttributes="Bold"/>
                     <Frame Padding="20,5" CornerRadius="10">
-                        <Entry Placeholder="Number of reps"   x:Name="squatsEntry"  />
+                        <Entry x:Name="squatsEntry"  Text="0" Keyboard="Numeric"/>
                     </Frame>
-                            <Label Text="Push ups" FontSize="Medium" TextColor="Black" FontAttributes="Bold"/>
+                            <Label Text="Push ups" FontSize="Medium" TextColor="{StaticResource Black}" FontAttributes="Bold"/>
                     <Frame Padding="20,5" CornerRadius="10">
-                        <Entry Placeholder="Number of reps" x:Name="pushupsEntry" />
+                                <Entry x:Name="pushupsEntry" Text="0" Keyboard="Numeric" />
                     </Frame>
-                            <Label Text="Mountain climbers" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
+                            <Label Text="Mountain climbers" FontSize="Medium" TextColor="{StaticResource Black}" FontAttributes="Bold" />
                     <Frame Padding="20,5" CornerRadius="10" >
-                        <Entry Placeholder="Number of reps" x:Name="mountainClimbersEntry" />
+                                <Entry x:Name="mountainClimbersEntry" Text="0" Keyboard="Numeric"/>
                     </Frame>
-                            <Label Text="Burpees" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
+                            <Label Text="Burpees" FontSize="Medium" TextColor="{StaticResource Black}" FontAttributes="Bold" />
                     <Frame Padding="20,5" CornerRadius="10">
-                        <Entry Placeholder="Number of reps" x:Name="burpeesEntry"/>
+                                <Entry x:Name="burpeesEntry" Text="0" Keyboard="Numeric"/>
                     </Frame>
 
 
-                            <Label Text="Date" FontSize="Medium" TextColor="Black" FontAttributes="Bold" />
+                            <Label Text="Date" FontSize="Medium" TextColor="{StaticResource Black}" FontAttributes="Bold" />
                     <DatePicker Date="11/11/2021" x:Name="dateEntry"></DatePicker>
                         </StackLayout>
 
@@ -38,12 +38,12 @@
                     </Frame>
                 </StackLayout>
                 <StackLayout>
-                    <Button Text="Take a photo" Clicked="Take_Photo_Clicked" BackgroundColor="Olive" CornerRadius="20" Margin="50,0,50,0"/>
+                    <Button Text="Take a photo" Clicked="Take_Photo_Clicked" BackgroundColor="{StaticResource OliveGreen}" CornerRadius="20" Margin="50,0,50,0"/>
                     <Image x:Name="resultImage" />
                 </StackLayout>
 
                 <StackLayout>
-                    <Button Text="Save Diary" Clicked="Save_Diary_Clicked" BackgroundColor="Olive" CornerRadius="20" Margin="50,0,50,0"/>
+                    <Button Text="Save Diary" Clicked="Save_Diary_Clicked" BackgroundColor="{StaticResource OliveGreen}" CornerRadius="20" Margin="50,0,50,0"/>
                 </StackLayout>
             
             </StackLayout>
