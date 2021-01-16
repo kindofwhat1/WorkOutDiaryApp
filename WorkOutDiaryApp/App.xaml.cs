@@ -15,9 +15,6 @@ namespace WorkOutDiaryApp
 
             NavigationPage page = new NavigationPage(new MainPage());
             page.BarBackgroundColor = (Color)Application.Current.Resources["Purple"];
-
-            //MainPage mainPage = new MainPage();
-            //MainPage = new NavigationPage(mainPage);
             MainPage = page;
         }
 

@@ -19,11 +19,11 @@ namespace WorkOutDiaryApp
             BindingContext = App.diaryViewModel;
         }
 
-        private void Remove_Entry_Clicked(object sender, EventArgs e)
+        private async void Remove_Entry_Clicked(object sender, EventArgs e)
         {
             var item = sender as Button;
             var selecter = item.CommandParameter as ImageModel;
-            App.diaryViewModel.DeleteDiaryEntry(selecter.Id);
+            await App.diaryViewModel.DeleteDiaryEntry(selecter.Id);
         }
     }
 }
