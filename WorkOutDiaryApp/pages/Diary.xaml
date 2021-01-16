@@ -18,8 +18,7 @@
 
                                             <Frame BackgroundColor="#E8E8E8">
                                                 <StackLayout Margin="25,0" Orientation="Vertical" VerticalOptions="Center" >
-                                                    <Label Text="Diary No." TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
-                                                    <Label Text="{Binding Id}" FontSize="Medium" />
+
                                                     <Label Text="Squats" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
                                                     <Label Text="{Binding Squats}" />
                                                     <Label Text="Push Ups" TextColor="Black" FontAttributes="Bold" FontSize="Medium" />
@@ -30,8 +29,8 @@
                                                     <Label Text="{Binding Burpees}" />
                                                     <Label Text="Date" TextColor="Black" FontAttributes="Bold" FontSize="Medium"/>
                                                     <Label Text="{Binding Time}" />
-                                                    <Image Source="{Binding ImageFile}" />
-                                                    <Button Text="Remove entry" BackgroundColor="Olive" CornerRadius="20"/>
+                                                    <Image Source="{Binding imageSource}" />
+                                                    <Button Text="Remove entry" BackgroundColor="Olive" CornerRadius="20" Clicked="Remove_Entry_Clicked" CommandParameter="{Binding .}"/>
                                                 </StackLayout>
                                             </Frame>
 

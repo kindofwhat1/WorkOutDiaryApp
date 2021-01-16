@@ -1,6 +1,7 @@
 ﻿using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace WorkOutDiaryApp.ViewModel
     public class DiaryViewModel
     {
         public event PropertyChangingEventHandler propertyChanged;
-        public List<DiaryModel> diaryModelList { get; set; } = new List<DiaryModel>();
+        public ObservableCollection<ImageModel> diaryModelList { get; set; } = new ObservableCollection<ImageModel>();
             
         private string dataBaseName = "WorkOutDiaryAppDatabase.db", databasePath;
 
@@ -59,14 +60,38 @@ namespace WorkOutDiaryApp.ViewModel
             }
             
         }
+        public async Task DeleteDiaryEntry(int id)
+        {
+            try
+            {
+                using (SQLiteConnection db = new SQLiteConnection(databasePath))
+                {
+                    db.Delete<DiaryModel>(id);
+                }
+                GetDiaryEntries();
+            }
+            catch (Exception e)
+            {
+                await Application.Current.MainPage.DisplayAlert("Database error - There was an error when creating the data base", e.Message, "Close");
+            }
+        }
         public void GetDiaryEntries()
         {
+
+            diaryModelList.Clear();
+
             using (SQLiteConnection db = new SQLiteConnection(databasePath))
             {
-                diaryModelList = db.Table<DiaryModel>().ToList();
+               var List = db.Table<DiaryModel>().ToList();
+                foreach (var item in List)
+                {
+                    ImageModel imageModel = new ImageModel(item);
+                    diaryModelList.Add(imageModel);
+                }
             }
             RaisePropertyChanged(nameof(diaryModelList));
         }
+
 
         protected void RaisePropertyChanged(string propertyName)
         {
